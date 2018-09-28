@@ -1,9 +1,8 @@
 language: java
-mvn install -DskipTests=true -Dmaven.javadoc.skip=true 
--B -V
-mvn test -B
 deploy:
-	provider: pages
-	skip-cleanup: true
-	github-token: $GITHUB_TOKEN
-	keep-history: true
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on: 
+    branch: gh-pages
